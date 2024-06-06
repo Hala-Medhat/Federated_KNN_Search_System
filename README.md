@@ -28,8 +28,9 @@ In this project you have 4 files
 
 - In the aggregator file, run the first cell to for setup
 - If you want to set rate limit for aggregator, run cell rate_limit_bool is set to True, else run rate_limit_bool set to False
+- If you want to mitigate the spoofing where the node spoofing can't know what is send encrupt data by running aggragtor.encrypt =True
 - If you want to set apply label fliping mitigation , run cell message_tampering is set to True, else run message_tampering set to False
-- If you want to check if message tampered with, or send by unlegitimate user, run message_integrity set to True, else run message_integrity set to False
+- If you want to check if message tampered with during transmission, or send by unlegitimate user, run message_integrity set to True, else run message_integrity set to False
 
 ### Query file
 - In the query file, run first cell for set up
@@ -41,8 +42,9 @@ In this project you have 4 files
 - To apply rate limiting run cell rate_limit_bool is set to True in aggregator file
 
 ### Spoofing attack
-- If first line when setting up redis was ran, it will not be able to join network
-- If not, it will join and you can prevent it from being processed by setting message_integrity to True in aggregator file since  node can't sign message
+- If first line when setting up redis was ran, it will not be able to join network.
+- If not, it will join and you can prevent it from being processed by setting message_integrity to True in aggregator file since  node can't sign message.
+- You can also prevent the spoofing node from reading data by running set encrypt = True in aggregator file.
 
 ### Tampering attack 
 - run for one of nodes in node file , tamper_data = True
